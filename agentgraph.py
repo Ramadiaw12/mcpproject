@@ -6,3 +6,13 @@ from langchain.messages import HumanMessage
 import asyncio
 from IPython.display import Markdown
 
+load_dotenv(override=True)
+
+mcp_client = MultiServerMCPClient(
+    {
+        "mcpserver": {
+        "transport": "streamable_http",
+        "url": "http://localhost:24000/mcp",
+        }
+    }
+)
