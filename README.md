@@ -608,12 +608,12 @@ if (!result.ok) {
 
 ## 👤 Author
 
-**Your Name**
+**DIAWANE Ramatoulaye**
 Staff Engineer — AI Systems & Distributed Platforms
 
-- GitHub: [@your-handle](https://github.com/your-handle)
-- LinkedIn: [linkedin.com/in/your-profile](https://linkedin.com/in/your-profile)
-- Email: you@domain.com
+- GitHub: [@your-handle](https://github.com/Ramadiaw12)
+- LinkedIn: [linkedin.com/in/your-profile](Ramatoulaye Diawane)
+- Email: rdiawane2001@gmail.com
 
 ---
 
