@@ -143,7 +143,7 @@ The `streamable-http` transport allows chunked, streaming responses over a stand
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-org/mcp-orchestration-hub.git
+git clone https://github.com/Ramadiaw12/mcpproject.git
 cd mcp-orchestration-hub
 ```
 
@@ -176,12 +176,12 @@ npm install -g @modelcontextprotocol/inspector
 ### MCP Server — `.env`
 
 ```bash
-cp mcp-server/.env.example mcp-server/.env
+cp mcp-server/.env.example mcpserver/.env
 ```
 
 ```env
 # Server
-PORT=3000
+PORT=24000
 HOST=0.0.0.0
 LOG_LEVEL=info
 
@@ -189,7 +189,7 @@ LOG_LEVEL=info
 TAVILY_API_KEY=tvly-xxxxxxxxxxxxxxxxxxxxxxxx
 
 # Tool: summarize_text
-ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxx
+OPENAI_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ### Python Agent — `.env`
@@ -200,10 +200,10 @@ cp agent/.env.example agent/.env
 
 ```env
 # LLM Provider
-ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxxxxx
+OPENAI_API_KET=sk-xxxxxxxxxxxxxxxxxxxxxxxx
 
 # MCP Server endpoint
-MCP_SERVER_URL=http://localhost:3000/mcp
+MCP_SERVER_URL=http://localhost:24000/mcp
 ```
 
 ### n8n — Environment Variables
@@ -211,7 +211,7 @@ MCP_SERVER_URL=http://localhost:3000/mcp
 In your n8n instance settings, define:
 
 ```
-MCP_SERVER_URL=http://localhost:3000/mcp
+MCP_SERVER_URL=http://localhost:24000/mcp
 MCP_API_KEY=your-optional-bearer-token
 ```
 
@@ -227,21 +227,15 @@ npm run build
 npm start
 ```
 
-The server is now listening at `http://localhost:3000/mcp`.
+The server is now listening at `http://localhost:24000/mcp`.
 
-### Run the Python Agent
 
-```bash
-cd agent
-source .venv/bin/activate
-python main.py --query "What are the latest advancements in LLM reasoning?"
-```
 
 ### Development mode (hot reload)
 
 ```bash
-cd mcp-server
-npm run dev
+cd mcpserver
+uv run agentmcp
 ```
 
 ---
@@ -331,14 +325,11 @@ Generates a concise, structured summary of a given text using an LLM.
 
 ---
 
-## 🔍 Testing with MCP Inspector
-
-The [MCP Inspector](https://github.com/modelcontextprotocol/inspector) is the official interactive UI for testing MCP servers.
 
 ### Launch the inspector against your running server
 
 ```bash
-npx @modelcontextprotocol/inspector http://localhost:3000/mcp
+npx @modelcontextprotocol/inspector http://localhost:24000/mcp
 ```
 
 This opens a local web UI where you can:
@@ -351,7 +342,7 @@ This opens a local web UI where you can:
 ### Expected output in Inspector
 
 ```
-Connected to MCP server at http://localhost:3000/mcp
+Connected to MCP server at http://localhost:24000/mcp
 Protocol version: 1.0
 Available tools: search_web, summarize_text
 ```
@@ -405,7 +396,7 @@ LangGraph Agent
 pip install langchain langgraph langchain-anthropic mcp langchain-mcp-adapters
 ```
 
-### Agent implementation (`agent/main.py`)
+### Agent implementation (`agentgraph.py`)
 
 ```python
 import asyncio
