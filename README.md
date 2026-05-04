@@ -19,9 +19,7 @@ Un serveur MCP exposant des outils RH et de recherche web, piloté par un agent 
 
 ## 📸 Aperçu
 
-> `[CAPTURE_ECRAN_1]`
-> *→ Montrer l'interface MCP Inspector avec le serveur connecté et les deux outils visibles (`get_employee_infos`, `search`)*
-
+![Interface MCP Inspector avec les outils disponibles](./images/inspector-tools.png)
 ---
 
 ## 🏗️ Architecture simplifiée
@@ -130,15 +128,15 @@ uv run agentgraph.py "Quel est le salaire de Rahma ?"
 npx @modelcontextprotocol/inspector http://localhost:24000
 ```
 
-> `[CAPTURE_ECRAN_2]`
-> *→ Montrer le terminal avec le serveur démarré et l'agent recevant une réponse en streaming*
+![Terminal avec server qui fonctionne](./images/serverok.png)*
 
 ---
 
 ## 💬 Exemples d'interactions
 
-> `[CAPTURE_ECRAN_3]`
-> *→ Montrer MCP Inspector avec un appel à `get_employee_infos` pour "Rahma" et la réponse JSON structurée*
+![agentgraph](./images/agentgraphok.png)
+---
+
 
 **Réponse brute de l'outil `get_employee_infos` :**
 ```json
@@ -159,8 +157,12 @@ npx @modelcontextprotocol/inspector http://localhost:24000
 }
 ```
 
-> `[CAPTURE_ECRAN_4]`
-> *→ Montrer un dialogue complet dans le terminal : question utilisateur → sélection d'outil par l'agent → réponse finale*
+![Interface MCP Inspector avec les outils disponibles](./images/n8nok.png)
+---
+
+![Interface MCP Inspector avec les outils disponibles](./images/n8npublish.png)
+---
+
 
 ---
 
