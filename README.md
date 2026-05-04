@@ -350,7 +350,7 @@ Available tools: search_web, summarize_text
 ### Manual HTTP test (streamable-http)
 
 ```bash
-curl -X POST http://localhost:3000/mcp \
+curl -X POST http://localhost:24000/mcp \
   -H "Content-Type: application/json" \
   -H "Accept: application/x-ndjson" \
   -d '{
@@ -409,7 +409,7 @@ async def run_agent(query: str):
     async with MultiServerMCPClient(
         {
             "orchestration_hub": {
-                "url": "http://localhost:3000/mcp",
+                "url": "http://localhost:24000/mcp",
                 "transport": "streamable_http",
             }
         }
@@ -602,7 +602,7 @@ if (!result.ok) {
 **DIAWANE Ramatoulaye**
 Staff Engineer — AI Systems & Distributed Platforms
 
-- GitHub: [@your-handle](https://github.com/Ramadiaw12)
+- GitHub: [https://github.com/Ramadiaw12]
 - LinkedIn: [linkedin.com/in/your-profile](Ramatoulaye Diawane)
 - Email: rdiawane2001@gmail.com
 
