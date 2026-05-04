@@ -31,7 +31,7 @@ Vous (langage naturel)
         │
         ▼
 ┌───────────────────┐
-│   Agent LangGraph  │  ←── DeepSeek LLM (raisonnement)
+│   Agent LangGraph  │  ←── Openai LLM (raisonnement)
 └────────┬──────────┘
          │  appel d'outil via MCP
          ▼
